@@ -1,4 +1,5 @@
 {{- $highlightColor := .Site.Params.highlightColor | default "#e22d30" -}}
+{{- $menuColor := .Site.Params.menuColor | default "#2a2a2a" -}}
 
 *,
 *::before,
@@ -131,7 +132,7 @@ textarea {
 	font-weight: 700;
 	color: #fff;
 	white-space: pre-line;
-	background: #2a2a2a;
+	background: {{ $menuColor }};
 }
 
 .btn:hover {
@@ -292,7 +293,7 @@ pre code {
 kbd {
 	padding: 2px 3px;
 	color: #fff;
-	background-color: #2a2a2a;
+	background-color: {{ $menuColor }};
 }
 
 blockquote {
@@ -397,7 +398,7 @@ select {
 	font-size: 2rem;
 	font-weight: 700;
 	line-height: 1;
-	color: #000;
+	color: {{ $menuColor }};
 }
 
 .logo__tagline {
@@ -430,7 +431,7 @@ select {
 	padding: 0;
 	font: inherit;
 	color: #fff;
-	background: #2a2a2a;
+	background: {{ $menuColor }};
 	border: 0;
 	outline: 0;
 }
@@ -470,7 +471,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 
 .menu__list {
 	list-style: none;
-	background: #2a2a2a;
+	background: {{ $menuColor }};
 }
 
 .menu__item:hover {
@@ -716,7 +717,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	margin: 0 6px 6px 0;
 	margin: 0 .375rem .375rem 0;
 	text-transform: uppercase;
-	background: #2a2a2a;
+	background: {{ $menuColor }};
 }
 
 .tags__item:hover {
@@ -762,7 +763,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	-ms-user-select: none;
 	-o-user-select: none;
 	user-select: none;
-	background: #2a2a2a;
+	background: {{ $menuColor }};
 }
 
 .toc__menu ul {
@@ -990,7 +991,7 @@ input[type=reset] {
 	color: #fff;
 	text-transform: uppercase;
 	cursor: pointer;
-	background: #2a2a2a;
+	background: {{ $menuColor }};
 	border: 0;
 	transition: all .1s linear;
 	-webkit-appearance: none;
@@ -1119,7 +1120,7 @@ textarea {
 	font-size: 12px;
 	font-size: .75rem;
 	color: #999;
-	background: #2a2a2a;
+	background: {{ $menuColor }};
 	border-top: 3px solid #999;
 }
 
