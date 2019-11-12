@@ -74,6 +74,17 @@
 			</a>
 		</div>
 		{{- end }}
+                {{- with .Site.Params.widgets.social.mastodon }}
+                {{ $mastoArray := (split $.Site.Params.widgets.social.mastodon "@") }}
+                {{ $mastoUser := (index $mastoArray 0) }}
+                {{ $mastoInstance := (index $mastoArray 1) }}
+                <div class="widget-social__item widget__item">
+                  <a class="widget-social__link widget__link btn" title="Mastodon" href="https://{{ $mastoInstance }}/@{{ $mastoUser }}">
+	            {{ partial "svg/mastodon.svg" (dict "class" "widget-social__link-icon") }}
+	            <span>{{ . }}</span>
+                  </a>
+                </div>
+                {{- end }}
 	</div>
 </div>
 {{- end }}
