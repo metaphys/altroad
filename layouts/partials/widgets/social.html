@@ -43,7 +43,6 @@
 	            {{ partial "svg/mastodon.svg" (dict "class" "widget-social__link-icon") }}
 	            <span>{{ . }}</span>
                   </a>
-                  <iframe allowfullscreen sandbox="allow-top-navigation allow-scripts" width="400" height="600" src="https://www.mastofeed.com/apiv2/feed?userurl=https%3A%2F%2F{{ $mastoInstance }}%2Fusers%2F{{ $mastoUser }}&theme=dark&size=70&header=false&replies=false&boosts=false"></iframe>
                 </div>
                 {{- end }}
 	</div>
