@@ -12,7 +12,9 @@
 	{{ with .OutputFormats.Get "rss" -}}
 	{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{ end -}}
-	{{ $style := resources.Get "css/style.css" | resources.ExecuteAsTemplate "css/style.css" . -}}
+        {{ $css := resources.Get "css/style.css" }} 
+        {{ $style := $css | resources.Minify | resources.ExecuteAsTemplate "css/style.css" . -}}
+
 	<link rel="stylesheet" href="{{ $style.RelPermalink }}">
 	{{ range .Site.Params.customCSS -}}
 	<link rel="stylesheet" href="{{ . | relURL }}">
